@@ -1,6 +1,6 @@
 import { Header } from 'components';
 import { CountrySearch, Home, Country } from 'pages';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 export const App = () => {
   return (
@@ -10,6 +10,7 @@ export const App = () => {
         <Route path="country" element={<CountrySearch />} />
         <Route path="country/:countryId" element={<Country />} />
       </Route>
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };
