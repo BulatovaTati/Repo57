@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 export const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Header />}>
+      <Route path="/" element={<Header />} end>
         <Route index element={<Home />} />
         <Route path="country" element={<CountrySearch />} />
         <Route path="country/:countryId" element={<Country />} />

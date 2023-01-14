@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 export const CountryList = ({ countries }) => {
   const location = useLocation();
-  console.log('location: ', location);
+  // console.log('location: ', location);
   return (
     <Grid>
       {countries?.map(({ id, country, flag }) => (
